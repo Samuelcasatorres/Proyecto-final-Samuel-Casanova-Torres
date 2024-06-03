@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repuestos LauSam - Registro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo Repuestos LauSam">
+            <h1>Repuestos LauSam</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="buscador.html">Buscador</a></li>
+                <li><a href="indicaciones.html">Indicaciones</a></li>
+            </ul>
+        </nav>
+        <p>Repuestos para tu carro a la velocidad de la luz.</p>
+    </header>
+    <main>
+        <h2>Registro de Producto</h2>
+        <form id="registro-form">
+            <div class="campo-container">
+                <label for="nombre-producto">Nombre del producto:</label>
+                <input type="text" id="nombre-producto" maxlength="20" required>
+            </div>
+            <div class="campo-container">
+                <label for="categoria">Categoría:</label>
+                <select id="categoria" required>
+                    <option value="">Seleccione una categoría</option>
+                    <option value="Motor">Motor</option>
+                    <option value="Frenos">Frenos</option>
+                    <option value="Suspensión">Suspensión</option>
+                    <option value="Eléctrico">Eléctrico</option>
+                    <option value="Accesorios">Accesorios</option>
+                </select>
+            </div>
+            <div class="campo-container">
+                <label for="imagen">Imagen:</label>
+                <select id="imagen" required>
+                    <option value="">Seleccione una imagen</option>
+                    <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgOx-GsoWFANsHvB50mzq6Qxmru_juVBL75fWyrw1UZA&s">Filtro de Aceite</option>
+                    <option value="https://talleresadomicilio.com/wp-content/uploads/2020/07/Bomba-de-Agua-para-Carro-Sistema-de-Refrigeraci%C3%B3n-Motor-Mec%C3%A1nica-Especializada-Automotriz.jpg">Bomba de Agua</option>
+                    <option value="https://www.google.com.co/imgres?q=correa%20de%20distribucion%20spark&imgurl=https%3A%2F%2Fhttp2.mlstatic.com%2FD_NQ_NP_926154-MCO51637753284_092022-O.webp">Correa de Distribución</option>
+                </select>
+            </div>
+            <div class="campo-container">
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" required>
+                <span>$</span>
+            </div>
+            <div class="campo-container">
+                <label for="codigo-producto">Código del producto:</label>
+                <input type="text" id="codigo-producto" required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}">
+            </div>
+            <div class="campo-container">
+                <label for="durabilidad">Durabilidad:</label>
+                <select id="durabilidad" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="Baja">Baja</option>
+                    <option value="Media">Media</option>
+                    <option value="Alta">Alta</option>
+                </select>
+            </div>
+            <div class="campo-container">
+                <label for="eficiencia">Eficiencia:</label>
+                <select id="eficiencia" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="Baja">Baja</option>
+                    <option value="Media">Media</option>
+                    <option value="Buena">Buena</option>
+                    <option value="Excelente">Excelente</option>
+                </select>
+            </div>
+            <div class="campo-container">
+                <label for="garantia">Garantía:</label>
+                <select id="garantia" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="Una semana">Una semana</option>
+                    <option value="Dos semanas">Dos semanas</option>
+                    <option value="Un mes">Un mes</option>
+                    <option value="Tres meses">Tres meses</option>
+                    <option value="Seis meses">Seis meses</option>
+                    <option value="Un año">Un año</option>
+                </select>
+            </div>
+            <div class="botones-container">
+                <button type="submit" id="registro-btn">Registrar</button>
+                <button type="reset" id="limpiar-btn">Limpiar</button>
+            </div>
+        </form>
+        <div id="indicaciones" style="display: none;">
+            <h2>Indicaciones</h2>
+            <p>Descripción de la empresa: Repuestos LauSam es líder en la venta de repuestos de alta calidad para automóviles.</p>
+            <h3>Instrucciones para crear un producto:</h3>
+            <ul>
+                <li>Rellene todos los campos del formulario de registro.</li>
+                <li>El código del producto debe tener al menos una minúscula, una mayúscula y dos números.</li>
+                <li>El precio debe estar en pesos y solo debe contener números.</li>
+            </ul>
+            <h3>Ejemplo de opciones disponibles:</h3>
+            <p>Ejemplo de código de producto válido: Abc12345</p>
+            <button onclick="ocultarIndicaciones()">Volver al Registro de Productos</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

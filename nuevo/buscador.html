@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repuestos LauSam - Buscador</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo Repuestos LauSam">
+            <h1>Repuestos LauSam</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="buscador.html">Buscador</a></li>
+                <li><a href="indicaciones.html">Indicaciones</a></li>
+            </ul>
+        </nav>
+        <p>Repuestos para tu carro a la velocidad de la luz.</p>
+    </header>
+    <main>
+        <h2>Buscador de Productos</h2>
+        <div class="buscador-container">
+            <input type="text" id="busqueda-nombre" placeholder="Buscar por nombre">
+            <select id="busqueda-categoria">
+                <option value="">Seleccione una categoría</option>
+                <option value="Motor">Motor</option>
+                <option value="Frenos">Frenos</option>
+                <option value="Suspensión">Suspensión</option>
+                <option value="Eléctrico">Eléctrico</option>
+                <option value="Accesorios">Accesorios</option>
+            </select>
+            <input type="number" id="busqueda-precio" placeholder="Buscar por precio máximo">
+            <button id="buscar-btn" onclick="buscarProductos()">Buscar</button>
+            <button id="limpiar-btn" onclick="limpiarBusqueda()">Limpiar</button>
+        </div>
+        <div id="loading" style="display: none;">Cargando...</div>
+        <div id="resultados" class="productos"></div>
+        <div id="paginacion-resultados" class="paginacion"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
